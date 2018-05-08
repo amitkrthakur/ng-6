@@ -1,0 +1,23 @@
+<p>
+  cuisine works!
+</p>
+<section id="cuisine">
+  <div class="cus-lis ">
+    <div class="tagline">
+      <h1>Cuisines</h1>
+      <p class="cen fff">More Cousines to choose from at locations around you</p>
+    </div>
+    <div class="cus-lis">
+      <ul class="cus-li">
+        <li *ngFor="let cuisine of data">
+            {{cuisine.cuisine_name}}
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="button ">
+    <a href="#cuisine-expanded-list" id="cus-det_toggle" class="button-size">View More > </a>
+  </div>
+</section>

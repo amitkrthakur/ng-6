@@ -1,0 +1,63 @@
+<p>
+  restaurants works!
+</p>
+<div class="res-box" *ngFor="let restaurant of restaurants">
+  <img src={{restaurant.featured_image}} class="res-img">
+  <div class="res-details">
+    <h1 class="res-name">{{restaurant.name}}</h1>
+    <p class="res-loc">{{restaurant.location.locality_verbose}}.</p>
+    <p class="res-addr">{{restaurant.location.address}}.</p>
+
+    <div class="res-lis">
+      <ul>
+        <li>
+          <span class="lis">
+            <strong>Cuisines:</strong>
+          </span>
+          <span class="cuisines">{{restaurant.cuisines}}</span>
+          <br/>
+        </li>
+        <li>
+          <span class="lis">
+            <strong>Average Cost for two: </strong>
+          </span>
+          <span class="avg-cst">{{restaurant.currency}} {{restaurant.average_cost_for_two}}.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <span class="button">
+        <strong>
+          <a href={{restaurant.menu_url}}>View Menu >
+          </a>
+        </strong>
+      </span>
+      <span class="button">
+        <strong>
+          <a href={{restaurant.photos_url}}>View Photos >
+          </a>
+        </strong>
+      </span>
+      <span class="button">
+        <strong>
+          <a href={{restaurant.url}}>Know More >
+          </a>
+        </strong>
+      </span>
+    </div>
+
+  </div>
+</div>
+
+<div>
+  <h4 class="hs">Top Cuisines in {{popularity.city}} :
+    <!-- <span class="hs-lis" *ngFor="popularity of popularity">{{popularity.top_cuisines}}, </span> -->
+  </h4>
+  <p class="button">
+    <strong>
+      <a href={{restaurant.url}}>Find More near {{location.title}} >
+      </a>
+    </strong>
+  </p>
+</div>
